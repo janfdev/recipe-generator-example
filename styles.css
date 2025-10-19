@@ -1,0 +1,133 @@
+:root {
+  --bg: #0b0e14;
+  --card: #121722;
+  --text: #eaeefb;
+  --muted: #9aa4b2;
+  --accent: #6aa4ff;
+  --accent-2: #6ff0c4;
+  --border: #21304a;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter,
+    Arial, sans-serif;
+}
+.container {
+  max-width: 880px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+h1 {
+  font-size: 28px;
+  margin: 0 0 8px;
+}
+.subtitle {
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+form {
+  background: var(--card);
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+textarea {
+  width: 100%;
+  resize: vertical;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: #0f1520;
+  color: var(--text);
+  outline: none;
+}
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px #6aa4ff22;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+}
+button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border: none;
+  color: #0b0e14;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+#status {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.results {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 16px;
+}
+.card h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+.badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px 0 12px;
+}
+.badge {
+  font-size: 12px;
+  color: #0b0e14;
+  background: var(--accent-2);
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+.list {
+  margin: 0;
+  padding-left: 18px;
+}
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px;
+}
+.empty {
+  color: var(--muted);
+  text-align: center;
+}
+.error {
+  color: #ff9494;
+}

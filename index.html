@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,viewport-fit=cover"
+    />
+    <title>Recipe Generator (Gemini)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>🍳 Recipe Generator</h1>
+      <p class="subtitle">
+        Masukkan bahan (pisahkan dengan koma), contoh:
+        <em>telur, ikan, nasi</em>
+      </p>
+
+      <form id="recipe-form">
+        <textarea
+          id="ingredients"
+          rows="3"
+          placeholder="telur, ikan, nasi"
+        ></textarea>
+        <div class="actions">
+          <button id="generate-btn" type="submit">Generate Resep</button>
+          <span id="status" aria-live="polite"></span>
+        </div>
+      </form>
+
+      <section id="results" class="results" aria-live="polite"></section>
+    </main>
+
+    <footer class="footer">
+      <small>Powered by Gemini · Deploy on Vercel</small>
+    </footer>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>
